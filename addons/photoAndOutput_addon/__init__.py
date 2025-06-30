@@ -9,11 +9,11 @@ from ...common.i18n.i18n import load_dictionary
 
 # Add-on info
 bl_info = {
-    "name": "Basic Add-on Sample",
-    "author": "[You name]",
+    "name": "模型批量导出插件",
+    "author": "2277",
     "blender": (3, 5, 0),
     "version": (0, 0, 1),
-    "description": "This is a template for building addons",
+    "description": "送给天雨雨的助力",
     "warning": "",
     "doc_url": "[documentation url]",
     "tracker_url": "[contact email]",

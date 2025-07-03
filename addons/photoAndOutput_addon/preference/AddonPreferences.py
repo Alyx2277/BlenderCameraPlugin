@@ -27,7 +27,7 @@ class ExampleAddonPreferences(AddonPreferences):
         name="Boolean",
         default=False
     )
-    output_fps: bpy.props.StringProperty(
+    output_fps: bpy.props.IntProperty(
         name="FPS",
         default="24"
     )

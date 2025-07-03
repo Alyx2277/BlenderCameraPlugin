@@ -12,7 +12,7 @@ bl_info = {
     "name": "模型批量导出插件",
     "author": "2277",
     "blender": (3, 5, 0),
-    "version": (0, 0, 1),
+    "version": (0, 0, 2),
     "description": "送给天雨雨的助力",
     "warning": "",
     "doc_url": "[documentation url]",

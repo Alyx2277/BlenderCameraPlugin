@@ -29,7 +29,7 @@ class ExampleAddonPreferences(AddonPreferences):
     )
     output_fps: bpy.props.IntProperty(
         name="FPS",
-        default="24"
+        default=24
     )
     output_resolution_x: bpy.props.IntProperty(
         name="Resolution X",

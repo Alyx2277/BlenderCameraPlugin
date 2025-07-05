@@ -1,7 +1,7 @@
 import bpy
 
 from ..config import __addon_name__
-from ..operators.AddonOperators import ExampleOperator, RecordAnimationAsPNG
+from ..operators.AddonOperators import RecordAnimationAsPNG
 from ....common.i18n.i18n import i18n
 from ....common.types.framework import reg_order
 
@@ -26,21 +26,17 @@ class ExampleAddonPanel(BasePanel, bpy.types.Panel):
 
         layout = self.layout
 
-        # layout.label(text=i18n("Example Functions") + ": " + str(addon_prefs.number))
-        # layout.prop(addon_prefs, "filepath")
-        # layout.separator()
-
-        # row = layout.row()
-        # row.prop(addon_prefs, "boolean")
-
-
         # 添加输出帧数设置
         layout.prop(addon_prefs, "output_fps")
         # 添加输出分辨率设置
         layout.separator()
         layout.prop(addon_prefs, "output_resolution_x")
         layout.prop(addon_prefs, "output_resolution_y")
-        # layout.operator(ExampleOperator.bl_idname)
+        # 添加输出帧范围设置
+        layout.separator()
+        layout.prop(addon_prefs, "output_start_frame")
+        layout.prop(addon_prefs, "output_end_frame")
+        layout.prop(addon_prefs, "output_step_frame")
 
         # 添加新按钮
         layout.operator(RecordAnimationAsPNG.bl_idname, text="Record Animation as PNG")
@@ -49,14 +45,3 @@ class ExampleAddonPanel(BasePanel, bpy.types.Panel):
     def poll(cls, context: bpy.types.Context):
         return True
 
-
-# This panel will be drawn after ExampleAddonPanel since it has a higher order value
-# @reg_order(1)
-# class ExampleAddonPanel2(BasePanel, bpy.types.Panel):
-#     bl_label = "Example Addon Side Bar Panel"
-#     bl_idname = "SCENE_PT_sample2"
-#
-#     def draw(self, context: bpy.types.Context):
-#         layout = self.layout
-#         layout.label(text="Second Panel")
-#         layout.operator(ExampleOperator.bl_idname)

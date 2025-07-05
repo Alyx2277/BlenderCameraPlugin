@@ -12,6 +12,7 @@ dictionary = {
         "Second Panel": "第二面板",
         ("*", "Add-on Preferences View"): "插件设置面板",
         ("Operator", "ExampleOperator"): "示例操作",
+        ("*", "Step Frame"): "步长",
     }
 }
 

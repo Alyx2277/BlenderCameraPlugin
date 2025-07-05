@@ -33,12 +33,27 @@ class ExampleAddonPreferences(AddonPreferences):
     )
     output_resolution_x: bpy.props.IntProperty(
         name="Resolution X",
-        default=1920,
+        default=256,
         min=1
     )
     output_resolution_y: bpy.props.IntProperty(
         name="Resolution Y",
-        default=1080,
+        default=256,
+        min=1
+    )
+    output_start_frame: bpy.props.IntProperty(
+        name="Start Frame",
+        default=1,
+        min=1
+    )
+    output_end_frame: bpy.props.IntProperty(
+        name="End Frame",
+        default=91,
+        min=1
+    )
+    output_step_frame: bpy.props.IntProperty(
+        name="Step Frame",
+        default=1,
         min=1
     )
 
@@ -49,5 +64,7 @@ class ExampleAddonPreferences(AddonPreferences):
         layout.prop(self, "boolean")
         layout.prop(self, "output_start_frame")
         layout.prop(self, "output_end_frame")
+        layout.prop(self, "output_fps")
         layout.prop(self, "output_resolution_x")
         layout.prop(self, "output_resolution_y")
+        layout.prop(self, "output_step_frame")
